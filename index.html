@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Music Player-Play free music</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav>
+
+
+
+
+    <div id="nav-top">
+
+      <div class="icon">
+        <i class="fa-solid fa-house"></i>
+        <p>Home</p>
+      </div>
+
+      <div class="icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>Search</p>
+      </div>
+      <div class="icon">
+        <i class="fa-regular fa-compass"></i>
+        <p>explore</p>
+      </div>
+      <div class="icon">
+        <i class="fa-regular fa-heart"></i>
+        <p>Favourites</p>
+      </div>
+
+      <div class="icon">
+        <i class="fa-solid fa-lines-leaning"></i>
+        <p>Library</p>
+      </div>
+
+
+
+
+    </div>
+
+    <div id="nav-bottom"">
+      <div class=" icon">
+      <i class="fa-solid fa-gear"></i>
+      <p>Settings</p>
+    </div>
+    <div id="pfp">P</div>
+    </div>
+  </nav>
+  <div id="main">
+    <div id="mainNav">
+      <p>Home</p>
+      <div>
+        <i class="fa-solid fa-bell"></i>
+        <i id="currentMusic" class="fa-solid fa-compact-disc"></i>
+      </div>
+    </div>
+    <div id="home">
+      <div id="albums">
+
+      </div>
+      <div id="songsDiv">
+        <div id="songsNav">
+          <p>Recently played</p>
+        </div>
+        <div id="songs">
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div style="overflow-y: scroll;" id="playingSong">
+      <div id="playSongNav">
+        <p>Now Playing</p>
+        <i id="cross" class="fa-solid fa-circle-xmark"></i>
+      </div>
+      <div id="songDetail">
+        <div id="songImage"></div>
+        <div id="songInfo">
+          <p id="songName">Song Name</p>
+          <p id="songArtist">Artist Name</p>
+        </div>
+        <div id="controls">
+          <div id="seekbar">
+            <div id="progress">
+
+            </div>
+          </div>
+          <div id="controlBtns">
+
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-solid fa-play"></i>
+            <i class="fa-solid fa-forward-step"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+      <div style="overflow-y: scroll;">
+        <div id="queueNav">
+          <p>Your Queue</p>
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+        <div id="queue">
+        </div>
+        
+      </div>
+
+    </div>
+
+
+    <!-- Add more buttons for other controls -->
+
+    <script src="https://kit.fontawesome.com/15526767ae.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

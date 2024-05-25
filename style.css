@@ -1,0 +1,456 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid red;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  
+  background-color: #05050B;
+  color: white;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+nav {
+  background: #3E355E;
+  position: relative;
+  min-width: 6vw;
+  height: 100%;
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav i {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+#nav-top {
+  min-height: 60%;
+  max-height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+#nav-bottom {
+
+  min-height: 25%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#pfp {
+  width: 50px;
+  height: 50px;
+  background: #1d871d;
+  border-radius: 50%;
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+
+
+
+#main {
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 10%;
+  transition: all 1s ease;
+
+}
+
+.icon i {
+  margin-bottom: 10px;
+}
+
+.icon p {
+  font-size: 0.8rem;
+  display: none;
+  transition: all 0.5s ease;
+
+}
+
+.active {
+  transition: all 300ms ease;
+  color: #e70B49;
+  scale: 1.2;
+}
+
+.active p {
+
+  transition: all 1s ease;
+
+}
+
+#mainNav {
+  margin: 26px 0;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: -10px;
+  background: #05050B;
+}
+
+#mainNav,#songsNav p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#songsDiv{
+  padding: 10px;
+}
+
+#mainNav div {
+  width: 10%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mainNav i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+
+
+#albums{
+  width: 100%;
+  height: 35vh;
+  margin: 45px 0 0 16px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.album{
+  min-width: 30%;
+  margin-right: 26px;
+  padding: 16px;
+  height: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ background: linear-gradient(to right top, #154564, #61ead7);;
+}
+
+.album #aname{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+
+#albums::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar in webkit browsers */
+}
+
+/* Optional: You can style scrollbar track and thumb */
+#albums::-webkit-scrollbar-track {
+    background: transparent; /* Color or image for scrollbar track */
+}
+
+#albums::-webkit-scrollbar-thumb {
+    background: transparent; /* Color or image for scrollbar thumb */
+}
+
+
+#main::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar in webkit browsers */
+}
+
+/* Optional: You can style scrollbar track and thumb */
+#main::-webkit-scrollbar-track {
+    background: transparent; /* Color or image for scrollbar track */
+}
+
+#main::-webkit-scrollbar-thumb {
+    background: transparent; /* Color or image for scrollbar thumb */
+}
+
+#songsDiv{
+  margin-top: 36px;
+
+}
+
+
+
+/* Define the keyframes for the rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Starting position */
+  }
+  to {
+    transform: rotate(360deg); /* Ending position */
+  }
+}
+
+/* Apply the animation to elements with the 'playing' class */
+.playing {
+  animation: rotate 2s linear infinite; /* Animation duration, timing function, and iteration count */
+}
+
+
+#songs{
+  margin: 46px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.song{
+  position: relative;
+  width: 30%;
+  /*background-color: #3E355E;*/
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  margin: 42px 16px 42px 42px;
+  border: 3px solid trasparent;
+
+}
+
+.song:hover{
+  border: 2px solid #848FA4;
+}
+
+.coverImg{
+  min-height: 150%;
+  min-width: 20%;
+  background: linear-gradient(to right top, #6b4407, #255c66);
+  border-radius: 8px;
+}
+.songDtls{
+  width: 50%;
+  
+}
+
+.songName{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.songDesc{
+  font-size: 0.7rem;
+  font-weight: lighter;
+}
+.controls{
+  width: 20%;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.optionsBox{
+  position: absolute;
+  background: linear-gradient(to right top, #4a4379, #000000);
+  opacity: 1;
+  right: -60px;
+  top: 65%;
+  z-index: 9;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #848FA4;
+  display: none;
+}
+
+.optionsBox p{
+  font-size: 0.8rem;
+  margin: 0px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+i{
+  cursor: pointer;
+}
+
+#playingSong{
+  height: 100%;
+  background:  #37314e;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 32px;
+ display: none;
+ flex-direction: column;
+}
+
+#playSongNav,#queueNav{
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#songDetail{
+  height: 60%;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#songImage{
+  width: 60%;
+  height: 40%;
+  background: linear-gradient(to right top, #6b4407, #255c66);
+  border-radius: 12px;
+}
+
+#songInfo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#songName{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 12px;
+}
+
+#songArtist{
+  font-size: 0.8rem;
+  font-weight: lighter;
+  opacity: 0.7;
+}
+#controls{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  height: 20%;
+}
+
+#controlBtns{
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  
+}
+
+#seekbar{
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to right top, #6b4407, #255c66);
+  position: relative;
+  margin-top: 20px;
+  
+}
+
+#queueNav{
+  border-top: 1px solid #7c7979;
+  padding: 16px 0;
+}
+
+@keyframes slideFromRight {
+  from {
+    right: -100%;
+    display: none;
+  }
+  to {
+    right: 0;
+    display: flex;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    right: 0%;
+    display: flex;
+  }
+  to {
+    right: -100%;
+    display: none;
+  }
+}
+
+
+.slide{
+  display: block;
+  animation: slideFromRight 0.5s ease-out;
+
+}
+
+.slideOut{
+  animation: slideFromLeft 1s forwards;
+
+}
+
+
+
+*::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar in webkit browsers */
+}
+
+/* Optional: You can style scrollbar track and thumb */
+*::-webkit-scrollbar-track {
+    background: transparent; /* Color or image for scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent; /* Color or image for scrollbar thumb */
+}
+
+
