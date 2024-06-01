@@ -169,6 +169,7 @@ nav i {
 }
 
 .album{
+  cursor: pointer;
   min-width: 30%;
   margin-right: 26px;
   padding: 16px;
@@ -188,9 +189,7 @@ nav i {
 }
 
 
-#albums::-webkit-scrollbar {
-    width: 0; /* Hides the scrollbar in webkit browsers */
-}
+
 
 /* Optional: You can style scrollbar track and thumb */
 #albums::-webkit-scrollbar-track {
@@ -245,6 +244,7 @@ nav i {
 }
 
 .song{
+  cursor: pointer;
   position: relative;
   width: 30%;
   /*background-color: #3E355E;*/
@@ -406,6 +406,7 @@ i{
 
 @keyframes slideFromRight {
   from {
+     
     right: -100%;
     display: none;
   }
@@ -428,7 +429,8 @@ i{
 
 
 .slide{
-  display: block;
+   
+  display: flex;
   animation: slideFromRight 0.5s ease-out;
 
 }
@@ -454,3 +456,60 @@ i{
 }
 
 
+@media (max-width: 768px) {
+
+  #albums{
+    height: 25vh !important;
+    scroll-snap-type: mandatory;
+  }
+  .album{
+    min-width: 90%;
+    scroll-snap-type: mandatory;
+    scroll-snap-align: end;
+    justify-content: space-around;
+   height: 100%;
+  } 
+  .album #aname{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+#songs 
+{
+  margin: 5vh 0;
+}
+
+.song{
+  width: 100%;
+margin: 2vh 0;
+
+}
+
+.songName{
+  font-size: 1.1rem;
+}
+
+.songDesc{
+  font-size: 0.7rem;
+  font-weight: lighter;
+}
+
+.controls{
+  width: 25%;
+}
+.coverImg{
+  min-height: 100%;
+}
+
+#playingSong{
+  width: 100%;
+}
+
+.optionsBox{
+  right: 10px;
+  padding: 0%;
+}
+
+  
+}

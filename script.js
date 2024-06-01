@@ -253,4 +253,9 @@ cross.addEventListener("click",()=>{
 
 
 
+const container = document.getElementById('albums');
 
+        container.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            container.scrollLeft += event.deltaY;
+        });
